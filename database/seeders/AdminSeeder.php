@@ -24,7 +24,7 @@ class AdminSeeder extends Seeder
         User::updateOrCreate(
             ['email' => 'admin@judo-bura.com.hr'],
             [
-                'name' => 'Damin',
+                'name' => 'Damir',
                 'password' => Hash::make(env('ADMIN2_PASSWORD')),
             ],
         );

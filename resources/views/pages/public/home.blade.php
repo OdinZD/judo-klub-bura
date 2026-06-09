@@ -24,7 +24,7 @@
                     <div class="animate-fade-up">
                         <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-bura-100 text-bura-600 text-sm font-medium">
                             <span class="size-1.5 rounded-full bg-bura-500"></span>
-                            Od 2005. godine
+                            Od 2023. godine
                         </span>
                     </div>
 
@@ -46,9 +46,9 @@
                     </div>
 
                     <div class="mt-10 flex gap-8 animate-fade-up animate-stagger-4">
-                        <x-stat-counter value="15+" label="Godina iskustva" />
-                        <x-stat-counter value="200+" label="Aktivnih članova" />
-                        <x-stat-counter value="50+" label="Medalja" />
+                        <x-stat-counter value="4+" label="Godina iskustva" />
+                        <x-stat-counter value="40+" label="Aktivnih članova" />
+                        <x-stat-counter value="30+" label="Medalja" />
                     </div>
                 </div>
 
@@ -136,11 +136,11 @@
                 {{-- Image (3 cols) --}}
                 <div class="lg:col-span-3 relative lg:-mr-8">
                     <div class="aspect-[4/3] rounded-2xl bg-bura-100 overflow-hidden">
-                        <div class="w-full h-full bg-gradient-to-br from-bura-200 to-adriatic-100 flex items-center justify-center">
-                            <svg class="size-16 text-bura-300" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="m2.25 15.75 5.159-5.159a2.25 2.25 0 0 1 3.182 0l5.159 5.159m-1.5-1.5 1.409-1.409a2.25 2.25 0 0 1 3.182 0l2.909 2.909M3.75 21h16.5A2.25 2.25 0 0 0 22.5 18.75V5.25A2.25 2.25 0 0 0 20.25 3H3.75A2.25 2.25 0 0 0 1.5 5.25v13.5A2.25 2.25 0 0 0 3.75 21Z" />
-                            </svg>
-                        </div>
+                        <img
+                            src="{{ asset('images/o-nama.jpeg') }}"
+                            alt="Judo Klub Bura - Naša priča"
+                            class="w-full h-full object-cover"
+                        >
                     </div>
                 </div>
 
@@ -154,7 +154,7 @@
                     />
 
                     <p class="mt-6 text-slate-muted leading-relaxed">
-                        Judo Klub Bura osnovan je s vizijom da stvori prostor gdje se snaga tijela i uma razvijaju zajedno, nošeni duhom jadranske bure - vjetra koji čisti, osvježava i pokreće.
+                        Judo Klub Bura osnovan je s vizijom da stvori prostor  gdje se snaga tijela i uma razvijaju zajedno, nošeni duhom jadranske bure - vjetra koji čisti, osvježava i pokreće, u malom mjestu Ljubač
                     </p>
 
                     <div class="mt-8">

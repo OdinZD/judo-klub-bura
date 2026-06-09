@@ -143,7 +143,7 @@ composer install
 npm install
 
 # Environment setup
-cp .env.example .env
+cp .env .env
 php artisan key:generate
 
 # Database

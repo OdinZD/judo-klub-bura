@@ -25,13 +25,13 @@
 
                         <div class="mt-6 space-y-4 text-slate-muted leading-relaxed">
                             <p>
-                                Judo Klub Bura osnovan je 2005. godine u Splitu, gradu gdje se snaga mora susreće sa snagom čovjeka. Ime smo dobili po buri - moćnom jadranskom vjetru koji čisti, osvježava i pokreće sve pred sobom.
+                                Judo Klub Bura osnovan je 2023. godine u malom mjestu Ljubač pokraj Zadra, gdje se snaga mora susreće sa snagom čovjeka. Ime smo dobili po buri - moćnom jadranskom vjetru koji čisti, osvježava i pokreće sve pred sobom.
                             </p>
                             <p>
-                                Naši osnivači, skupina entuzijasta s crnim pojasevima i velikom vizijom, željeli su stvoriti prostor gdje judo nije samo sport, već način života. Prostor gdje se uči poštovanje, razvija disciplina i grade prijateljstva koja traju cijeli život.
+                                Osnivač i glavni trener Damir Stojić nositelj crnog pojasa sa velikom vizijom, želio je stvoriti prostor gdje judo nije samo sport, već način života. Prostor gdje se uči poštovanje, razvija disciplina i grade prijateljstva koja traju cijeli život.
                             </p>
                             <p>
-                                Danas smo ponosni na više od 200 aktivnih članova svih uzrasta, od malih judasa koji tek uče padove do iskusnih seniora koji se natječu na međunarodnoj razini.
+                                Danas smo ponosni na više od 40 aktivnih članova svih uzrasta, od malih judasa koji tek uče do seniora koji su odlučili nastaviti put u JK Bura.
                             </p>
                         </div>
                     </div>
@@ -40,11 +40,11 @@
                 {{-- Image --}}
                 <div>
                     <div class="aspect-[4/3] rounded-2xl bg-bura-100 overflow-hidden">
-                        <div class="w-full h-full bg-gradient-to-br from-bura-200 to-adriatic-100 flex items-center justify-center">
-                            <svg class="size-16 text-bura-300" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="m2.25 15.75 5.159-5.159a2.25 2.25 0 0 1 3.182 0l5.159 5.159m-1.5-1.5 1.409-1.409a2.25 2.25 0 0 1 3.182 0l2.909 2.909M3.75 21h16.5A2.25 2.25 0 0 0 22.5 18.75V5.25A2.25 2.25 0 0 0 20.25 3H3.75A2.25 2.25 0 0 0 1.5 5.25v13.5A2.25 2.25 0 0 0 3.75 21Z" />
-                            </svg>
-                        </div>
+                        <img
+                            src="{{ asset('images/o-nama.jpeg') }}"
+                            alt="Judo Klub Bura - Naša priča"
+                            class="w-full h-full object-cover"
+                        >
                     </div>
                 </div>
             </div>
