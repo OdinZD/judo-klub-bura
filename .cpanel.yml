@@ -2,6 +2,7 @@
 deployment:
   tasks:
     - /usr/local/bin/php artisan migrate --force
+    - /usr/local/bin/php artisan db:seed --class=AdminSeeder --force
     - /usr/local/bin/php artisan config:cache
     - /usr/local/bin/php artisan route:cache
     - /usr/local/bin/php artisan view:cache
