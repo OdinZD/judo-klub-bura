@@ -12,4 +12,4 @@ deployment:
     - /bin/cp -f /home/judoklub/repositories/judo-klub-bura/public/favicon.svg /home/judoklub/public_html/
     - /bin/cp -f /home/judoklub/repositories/judo-klub-bura/public/robots.txt /home/judoklub/public_html/
     - /bin/cp -f /home/judoklub/repositories/judo-klub-bura/public/apple-touch-icon.png /home/judoklub/public_html/
-    - /bin/ln -sfn /home/judoklub/repositories/judo-klub-bura/storage/app/public /home/judoklub/public_html/storage
+    - /bin/mkdir -p /home/judoklub/public_html/storage
