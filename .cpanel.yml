@@ -1,15 +1,15 @@
 ---
 deployment:
   tasks:
-    - chmod 755 /home/judoklub/repositories/judo-klub-bura/database
-    - chmod 664 /home/judoklub/repositories/judo-klub-bura/database/database.sqlite
-    - chmod -R 775 /home/judoklub/repositories/judo-klub-bura/storage
-    - chmod -R 775 /home/judoklub/repositories/judo-klub-bura/bootstrap/cache
-    - /usr/local/bin/php artisan config:clear
-    - /usr/local/bin/php artisan migrate --force
-    - /usr/local/bin/php artisan db:seed --class=AdminSeeder --force
-    - /usr/local/bin/php artisan config:cache
-    - /usr/local/bin/php artisan route:cache
-    - /usr/local/bin/php artisan view:cache
-    - rsync -a --exclude='index.php' /home/judoklub/repositories/judo-klub-bura/public/ /home/judoklub/public_html/
-    - ln -sfn /home/judoklub/repositories/judo-klub-bura/storage/app/public /home/judoklub/public_html/storage
+    - /usr/local/bin/php /home/judoklub/repositories/judo-klub-bura/artisan config:clear
+    - /usr/local/bin/php /home/judoklub/repositories/judo-klub-bura/artisan migrate --force
+    - /usr/local/bin/php /home/judoklub/repositories/judo-klub-bura/artisan db:seed --class=AdminSeeder --force
+    - /bin/rm -rf /home/judoklub/public_html/build
+    - /bin/cp -r /home/judoklub/repositories/judo-klub-bura/public/build /home/judoklub/public_html/build
+    - /bin/rm -rf /home/judoklub/public_html/images
+    - /bin/cp -r /home/judoklub/repositories/judo-klub-bura/public/images /home/judoklub/public_html/images
+    - /bin/cp -f /home/judoklub/repositories/judo-klub-bura/public/favicon.ico /home/judoklub/public_html/
+    - /bin/cp -f /home/judoklub/repositories/judo-klub-bura/public/favicon.svg /home/judoklub/public_html/
+    - /bin/cp -f /home/judoklub/repositories/judo-klub-bura/public/robots.txt /home/judoklub/public_html/
+    - /bin/cp -f /home/judoklub/repositories/judo-klub-bura/public/apple-touch-icon.png /home/judoklub/public_html/
+    - /bin/ln -sfn /home/judoklub/repositories/judo-klub-bura/storage/app/public /home/judoklub/public_html/storage
