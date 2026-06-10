@@ -1,6 +1,11 @@
 ---
 deployment:
   tasks:
+    - chmod 755 /home/judoklub/repositories/judo-klub-bura/database
+    - chmod 664 /home/judoklub/repositories/judo-klub-bura/database/database.sqlite
+    - chmod -R 775 /home/judoklub/repositories/judo-klub-bura/storage
+    - chmod -R 775 /home/judoklub/repositories/judo-klub-bura/bootstrap/cache
+    - /usr/local/bin/php artisan config:clear
     - /usr/local/bin/php artisan migrate --force
     - /usr/local/bin/php artisan db:seed --class=AdminSeeder --force
     - /usr/local/bin/php artisan config:cache
