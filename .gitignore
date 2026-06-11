@@ -9,6 +9,7 @@
 /database/*.sqlite-journal
 /database/*.sqlite-wal
 /database/*.sqlite-shm
+error_log
 # /vendor
 .env
 .env.backup
@@ -25,4 +26,3 @@ yarn-error.log
 /.nova
 /.vscode
 /.zed
-/.claude

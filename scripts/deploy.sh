@@ -50,7 +50,6 @@ echo "[2/4] Uploading files to server..."
 rsync -azh --delete \
     --exclude='.git' \
     --exclude='.github' \
-    --exclude='.claude' \
     --exclude='node_modules' \
     --exclude='tests' \
     --exclude='.env' \
