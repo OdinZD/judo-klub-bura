@@ -148,10 +148,10 @@
             />
 
             <div class="mt-12 grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
-                <x-stat-counter value="120+" label="Zlatnih medalja" :light="true" />
-                <x-stat-counter value="85+" label="Srebrnih medalja" :light="true" />
-                <x-stat-counter value="150+" label="Brončanih medalja" :light="true" />
-                <x-stat-counter value="12" label="Državnih prvenstava" :light="true" />
+                <x-stat-counter value="" label="Zlatnih medalja" :light="true" />
+                <x-stat-counter value="" label="Srebrnih medalja" :light="true" />
+                <x-stat-counter value="" label="Brončanih medalja" :light="true" />
+                <x-stat-counter value="" label="Državnih prvenstava" :light="true" />
             </div>
         </div>
     </section>
