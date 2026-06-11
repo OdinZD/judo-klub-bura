@@ -10,7 +10,7 @@
         @foreach($groups as $group)
             <div wire:key="group-{{ $group->id }}" class="bg-white dark:bg-zinc-800 rounded-xl border border-zinc-200 dark:border-zinc-700 overflow-hidden">
                 {{-- Group header --}}
-                <div class="flex items-center gap-4 p-4 border-b border-zinc-100 dark:border-zinc-700">
+                <div class="flex flex-wrap items-center gap-x-4 gap-y-3 p-4 border-b border-zinc-100 dark:border-zinc-700">
                     @if($editingGroupId === $group->id)
                         {{-- Edit mode --}}
                         <div class="flex-1 grid sm:grid-cols-4 gap-3">
@@ -29,9 +29,9 @@
                             <flux:icon :name="$group->icon" class="size-5" />
                         </div>
                         <div class="flex-1 min-w-0">
-                            <div class="flex items-center gap-2">
+                            <div class="flex flex-wrap items-center gap-x-2 gap-y-0.5">
                                 <flux:heading size="sm">{{ $group->name }}</flux:heading>
-                                <flux:text size="sm">{{ $group->age_range }}</flux:text>
+                                <flux:text size="sm" class="whitespace-nowrap">{{ $group->age_range }}</flux:text>
                                 @if(! $group->is_active)
                                     <flux:badge size="sm" color="zinc">Neaktivno</flux:badge>
                                 @endif
@@ -67,16 +67,20 @@
 
                     {{-- Add session form --}}
                     @if($addingSessionGroupId === $group->id)
-                        <div class="mt-3 flex items-end gap-3 p-3 rounded-lg border border-zinc-200 dark:border-zinc-600 bg-zinc-50 dark:bg-zinc-750">
-                            <flux:select wire:model="newSessionDay" label="Dan" size="sm" class="w-40">
+                        <div class="mt-3 flex flex-col sm:flex-row sm:flex-wrap sm:items-end gap-3 p-3 rounded-lg border border-zinc-200 dark:border-zinc-600 bg-zinc-50 dark:bg-zinc-750">
+                            <flux:select wire:model="newSessionDay" label="Dan" size="sm" class="w-full sm:w-40">
                                 @foreach($days as $day)
                                     <flux:select.option value="{{ $day->value }}">{{ $day->label() }}</flux:select.option>
                                 @endforeach
                             </flux:select>
-                            <flux:input wire:model="newSessionStart" label="Od" type="time" size="sm" class="w-28" />
-                            <flux:input wire:model="newSessionEnd" label="Do" type="time" size="sm" class="w-28" />
-                            <flux:button wire:click="addSession" variant="primary" size="sm" icon="plus">Dodaj</flux:button>
-                            <flux:button wire:click="cancelAddSession" variant="ghost" size="sm">Odustani</flux:button>
+                            <div class="flex gap-3">
+                                <flux:input wire:model="newSessionStart" label="Od" type="time" size="sm" class="w-full sm:w-28" />
+                                <flux:input wire:model="newSessionEnd" label="Do" type="time" size="sm" class="w-full sm:w-28" />
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <flux:button wire:click="addSession" variant="primary" size="sm" icon="plus">Dodaj</flux:button>
+                                <flux:button wire:click="cancelAddSession" variant="ghost" size="sm">Odustani</flux:button>
+                            </div>
                         </div>
                     @else
                         <div class="mt-3">

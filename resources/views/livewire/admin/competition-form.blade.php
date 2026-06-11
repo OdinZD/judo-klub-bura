@@ -63,14 +63,14 @@
             {{-- Add result form --}}
             <div class="border-t border-zinc-200 dark:border-zinc-600 pt-5">
                 <flux:text size="sm" class="mb-3 font-medium">Dodaj rezultat</flux:text>
-                <div class="flex items-end gap-3 flex-wrap">
-                    <div class="flex-1 min-w-[150px]">
+                <div class="flex flex-col sm:flex-row sm:flex-wrap sm:items-end gap-3">
+                    <div class="w-full sm:flex-1 sm:min-w-[150px]">
                         <flux:input wire:model="newAthleteName" placeholder="Ime sportaša" size="sm" />
                     </div>
-                    <div class="w-32">
+                    <div class="w-full sm:w-32">
                         <flux:input wire:model="newWeightCategory" placeholder="Kategorija" size="sm" />
                     </div>
-                    <div class="w-40">
+                    <div class="w-full sm:w-40">
                         <flux:select wire:model="newPlacement" size="sm">
                             @foreach($placements as $p)
                                 <flux:select.option value="{{ $p->value }}">{{ $p->label() }}</flux:select.option>
